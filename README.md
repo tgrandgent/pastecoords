@@ -11,6 +11,29 @@ You must set up an AutoHotKey script or similar to run it when you want to paste
 2. convert to a format suitable for the Apache, e.g. `MGRS GRID: 38 T KM 82644 70332` becomes `38TKM82647033`
 3. simulate keypresses to input the coordinates into the Apache's KDU
 
+## Installation
+You have two options to get a binary you can run:
+
+### Option 1 - Build from source
+Clone or download this repo and run the following command from the same directory
+as the .sln file (requires [.NET SDK](https://dotnet.microsoft.com/en-us/download)
+version 6 or later):
+
+```sh
+dotnet build --configuration Release
+```
+
+Or you can build it with an IDE like Visual Studio, VS Code, Rider, etc.
+
+### Option 2 - Use a pre-compiled binary
+Download the .zip file from the Releases section of the repo.  Windows or some other
+security software may complain about viruses.  If you're concerned, you can scan it
+with [VirusTotal](https://www.virustotal.com/) or use option 1 above.
+
+### Result
+Either way, you'll end up with `PasteCoords.exe` and associated files.  You can
+store these files wherever you like.
+
 ## Setup
 ### AutoHotKey script
 You need a way to trigger the program to run while you're in DCS.  Here's an example AutoHotKey 2.0 script that runs it when you press Win+Z:
